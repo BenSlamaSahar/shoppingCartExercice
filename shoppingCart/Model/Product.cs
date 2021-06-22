@@ -60,17 +60,17 @@ namespace shoppingCart.Model
         }
 
 
-        private void ApplyCoupon(Coupon coupon, ref Product p)
+        private void ApplyCoupon(Coupon coupon, ref Product product)
         {  }
 
-         private void ApplyCoupon(CouponToEachItem coupon, ref Product p)
-        { coupon.Discount(ref p); }
+         private void ApplyCoupon(CouponToEachItem coupon, ref Product product)
+        { coupon.Discount(ref product); }
 
-        private void ApplyCoupon(CouponToNextItem coupon, ref Product p)
-        { coupon.Discount(ref p); }
+        private void ApplyCoupon(CouponToNextItem coupon, ref Product product)
+        { coupon.Discount(ref product); }
 
-        private void ApplyCoupon(CouponToTypeItem coupon, ref Product p)
-        { coupon.Discount(ref p); }
+        private void ApplyCoupon(CouponToTypeItem coupon, ref Product product)
+        { coupon.Discount(ref product); }
 
     }
 }
