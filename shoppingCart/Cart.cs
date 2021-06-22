@@ -58,10 +58,28 @@ namespace shoppingCart
          }
      
         private void SaveCoupon(CouponToEachItem coupon)
-         {
+        {
             this._products.ForEach(product => product._ownCoupons.Add(coupon));
             _coupons.Add(coupon);
-         }
+        }
+
+        private void SaveCoupon(CouponToTypeItem coupon)
+        {
+            var isProductTypeExist = _products.Exists(elt => elt.productName.Equals(coupon.productName));
+            var productsList = _products.FindAll(elt => elt.productName.Equals(coupon.productName));
+            var productsNombre = productsList.Count();
+
+            if (!isProductTypeExist)
+                _coupons.Add(coupon);
+
+            else if (productsNombre >= coupon.productIndex)
+                productsList.ElementAt(coupon.productIndex - 1)._ownCoupons.Add(coupon);
+
+            else
+            {    coupon.productIndex -= productsNombre;
+                _coupons.Add(coupon);
+            }
+        }
 
         public void SetItems(List<item> items)
         {

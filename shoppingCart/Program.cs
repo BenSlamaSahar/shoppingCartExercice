@@ -11,11 +11,16 @@ namespace shoppingCart
         static void Main(string[] args)
         {
             List<item> itemList = new List<item> {
-                new CouponToTypeItem("pen", 2, 10),
-                new Product("pen", 100),
-                new Product("pen", 100),
-                new CouponToEachItem(10),
-                new Product("pen", 100)
+                new CouponToEachItem(5),
+                new Product("pen", 10),
+                new Product("book", 15),
+                new CouponToTypeItem ("pen",3,5),
+                new CouponToNextItem(50),
+                new Product("pen", 10),
+                new Product("notebook", 18),
+                new CouponToTypeItem ("pen",2,2),
+                new Product("pen", 16),
+                new Product("pen", 10),
             };
                 
             var cart = new Cart();

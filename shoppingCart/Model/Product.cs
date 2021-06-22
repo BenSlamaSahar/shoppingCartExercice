@@ -36,13 +36,13 @@ namespace shoppingCart.Model
                     {
                         _coupon.productIndex -= 1;
                     }
-                    else
+                    else if (_coupon.productName.Equals(productName) && _coupon.productIndex == 1)
                     {
                         _ownCoupons.Add(coupon);
                         couponsList.Remove(coupon);
                     }
                 }
-                else
+                else if (couponType == typeof(CouponToEachItem))
 
                     _ownCoupons.Add(coupon);
             }
