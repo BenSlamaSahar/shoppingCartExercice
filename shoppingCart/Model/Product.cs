@@ -9,11 +9,10 @@ namespace shoppingCart.Model
     {
          public List<Coupon> _ownCoupons = new List<Coupon>();
          public string productName;
-         public float _price;
+         public decimal _price;
 
-          public Product(List<Coupon> _ownCoupons, string productName, float _price)
-          {
-            this._ownCoupons = _ownCoupons;
+          public Product(string productName, decimal _price)
+          {          
             this.productName = productName;
             this._price = _price;
           }
@@ -49,7 +48,7 @@ namespace shoppingCart.Model
             }
         }
 
-        public  float CalculatePrice(Product product)
+        public decimal CalculatePrice(Product product)
         {
             foreach (var elt in product._ownCoupons)
             {

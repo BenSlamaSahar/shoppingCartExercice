@@ -6,9 +6,9 @@ namespace shoppingCart.Model
 {
     public class CouponToNextItem : Coupon
     {
-        private float discountValue;
+        private decimal discountValue;
 
-        public CouponToNextItem(float discountValue)
+        public CouponToNextItem(decimal discountValue)
         {
             this.discountValue = discountValue;
         }

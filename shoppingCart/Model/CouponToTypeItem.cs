@@ -8,9 +8,9 @@ namespace shoppingCart.Model
     {
         public string productName;
         public int productIndex;
-        public float priceOff;
+        public decimal priceOff;
 
-        public CouponToTypeItem(string productName , int productIndex, float priceOff)
+        public CouponToTypeItem(string productName , int productIndex, decimal priceOff)
         {
             this.productName = productName;
             this.productIndex = productIndex;

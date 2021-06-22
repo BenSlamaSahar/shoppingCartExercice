@@ -13,7 +13,7 @@ namespace shoppingCart
         private List<Product> _products = new List<Product>();
         private List<Coupon> _coupons = new List<Coupon>();
 
-        public float TotalPrice()
+        public decimal TotalPrice()
         {
             this.CartAnalyse();
 
@@ -25,10 +25,10 @@ namespace shoppingCart
         void CartAnalyse()
         {
             var c1= new CouponToTypeItem("pen",2,10);
-            var pro = new Product(new List<Coupon>(),"pen",100);
-            var pro1 = new Product(new List<Coupon>(), "pen", 100);
+            var pro = new Product("pen",100);
+            var pro1 = new Product("pen", 100);
             var c2 = new CouponToEachItem( 10);
-            var pro2 = new Product(new List<Coupon>(), "pen", 100);
+            var pro2 = new Product("pen", 100);
             _cartItems.Add(c1);
             _cartItems .Add(pro);
             _cartItems.Add(pro1);

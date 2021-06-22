@@ -8,9 +8,9 @@ namespace shoppingCart
     {
         static void Main(string[] args)
         {
-            var c = new Cart();
-            var t =c.TotalPrice();
-            Console.WriteLine(t);
+            var cart = new Cart();
+            var totalPrice = cart.TotalPrice();
+            Console.WriteLine("$"+ totalPrice);
             Thread.Sleep(300);
 
         }
