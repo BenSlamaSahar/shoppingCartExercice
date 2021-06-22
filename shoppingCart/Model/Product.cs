@@ -42,7 +42,7 @@ namespace shoppingCart.Model
                         couponsList.Remove(coupon);
                     }
                 }
-                else if (couponType == typeof(CouponToEachItem))
+                else
 
                     _ownCoupons.Add(coupon);
             }
