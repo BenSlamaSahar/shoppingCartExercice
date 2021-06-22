@@ -6,5 +6,6 @@ namespace shoppingCart.Model
 {
     public class item
     {
+        private Guid _idItem;
     }
 }

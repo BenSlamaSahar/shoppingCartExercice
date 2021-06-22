@@ -9,6 +9,7 @@ namespace shoppingCart
 {
     public class Cart
     {
+        private Guid _idCart;
         private List<item> _cartItems = new List<item>();
         private List<Product> _products = new List<Product>();
         private List<Coupon> _coupons = new List<Coupon>();
@@ -22,18 +23,8 @@ namespace shoppingCart
             return  _products.Sum(product => product._price);
         }
 
-        void CartAnalyse()
+        private void CartAnalyse()
         {
-            var c1= new CouponToTypeItem("pen",2,10);
-            var pro = new Product("pen",100);
-            var pro1 = new Product("pen", 100);
-            var c2 = new CouponToEachItem( 10);
-            var pro2 = new Product("pen", 100);
-            _cartItems.Add(c1);
-            _cartItems .Add(pro);
-            _cartItems.Add(pro1);
-            _cartItems.Add(c2);
-            _cartItems.Add(pro2);
 
             _cartItems.ForEach(e =>
             {
@@ -71,5 +62,10 @@ namespace shoppingCart
             this._products.ForEach(product => product._ownCoupons.Add(coupon));
             _coupons.Add(coupon);
          }
+
+        public void SetItems(List<item> items)
+        {
+            _cartItems = items;
+        }
     }
 }
